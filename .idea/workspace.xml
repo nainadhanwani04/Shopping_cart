@@ -1,48 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5c80192e-c4c7-4ac3-aaba-842dd2ad4ea7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/shopping/dao/OrderDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/client/OrderClient.class" afterPath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/client/OrderClient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/client/OrderDetailClient.class" afterPath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/client/OrderDetailClient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/client/ProductClient.class" afterPath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/client/ProductClient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/client/UserClient.class" afterPath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/client/UserClient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/dao/OrderDetailDaoImp.class" afterPath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/dao/OrderDetailDaoImp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/dao/ProductDao.class" afterPath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/dao/ProductDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/dao/ProductDaoImpl.class" afterPath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/dao/ProductDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/dao/UserDao.class" afterPath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/dao/UserDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/dao/UserDaoImpl.class" afterPath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/dao/UserDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/domain/Order.class" afterPath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/domain/Order.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/domain/OrderDetail.class" afterPath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/domain/OrderDetail.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/domain/Product.class" afterPath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/domain/Product.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/domain/User.class" afterPath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/domain/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/service/OrderDetailServiceImp.class" afterPath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/service/OrderDetailServiceImp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/service/ProductService.class" afterPath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/service/ProductService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/service/ProductServiceImpl.class" afterPath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/service/ProductServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/service/UserService.class" afterPath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/service/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/service/UserServiceImpl.class" afterPath="$PROJECT_DIR$/out/production/ShoppingCart/com/shopping/service/UserServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shopping/client/OrderClient.java" afterPath="$PROJECT_DIR$/src/com/shopping/client/OrderClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shopping/client/OrderDetailClient.java" afterPath="$PROJECT_DIR$/src/com/shopping/client/OrderDetailClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shopping/client/ProductClient.java" afterPath="$PROJECT_DIR$/src/com/shopping/client/ProductClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shopping/client/UserClient.java" afterPath="$PROJECT_DIR$/src/com/shopping/client/UserClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shopping/dao/OrderDetailDao.java" afterPath="$PROJECT_DIR$/src/com/shopping/dao/OrderDetailDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shopping/dao/OrderDetailDaoImp.java" afterPath="$PROJECT_DIR$/src/com/shopping/dao/OrderDetailDaoImp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shopping/dao/ProductDao.java" afterPath="$PROJECT_DIR$/src/com/shopping/dao/ProductDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shopping/dao/ProductDaoImpl.java" afterPath="$PROJECT_DIR$/src/com/shopping/dao/ProductDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shopping/dao/UserDao.java" afterPath="$PROJECT_DIR$/src/com/shopping/dao/UserDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shopping/dao/UserDaoImpl.java" afterPath="$PROJECT_DIR$/src/com/shopping/dao/UserDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shopping/domain/Order.java" afterPath="$PROJECT_DIR$/src/com/shopping/domain/Order.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shopping/domain/OrderDetail.java" afterPath="$PROJECT_DIR$/src/com/shopping/domain/OrderDetail.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shopping/domain/Product.java" afterPath="$PROJECT_DIR$/src/com/shopping/domain/Product.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shopping/domain/User.java" afterPath="$PROJECT_DIR$/src/com/shopping/domain/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shopping/service/OrderDetailService.java" afterPath="$PROJECT_DIR$/src/com/shopping/service/OrderDetailService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shopping/service/OrderDetailServiceImp.java" afterPath="$PROJECT_DIR$/src/com/shopping/service/OrderDetailServiceImp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shopping/service/ProductService.java" afterPath="$PROJECT_DIR$/src/com/shopping/service/ProductService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shopping/service/ProductServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/shopping/service/ProductServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shopping/service/UserService.java" afterPath="$PROJECT_DIR$/src/com/shopping/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shopping/service/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/shopping/service/UserServiceImpl.java" />
-    </list>
+    <list default="true" id="5c80192e-c4c7-4ac3-aaba-842dd2ad4ea7" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -105,8 +64,8 @@
       <file leaf-file-name="OrderDaoImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/shopping/dao/OrderDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="95" column="13" lean-forward="false" selection-start-line="95" selection-start-column="13" selection-end-line="95" selection-end-column="13" />
+            <state relative-caret-position="255">
+              <caret line="99" column="35" lean-forward="true" selection-start-line="99" selection-start-column="35" selection-end-line="99" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1247,8 +1206,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/shopping/dao/OrderDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="95" column="13" lean-forward="false" selection-start-line="95" selection-start-column="13" selection-end-line="95" selection-end-column="13" />
+        <state relative-caret-position="255">
+          <caret line="99" column="35" lean-forward="true" selection-start-line="99" selection-start-column="35" selection-end-line="99" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -58,20 +58,21 @@ public class Product {
         this.stock = stock;
     }
 
-    public static Product createProduct(int id, String name, String code, double price, int stock) {
+    public static Product createProduct(String name, String code, double price, int stock) {
         Product product = new Product();
-        product.setId(id);
+     // product.setId(id);
         product.setName(name);
         product.setCode(code);
         product.setPrice(price);
         product.setStock(stock);
         return product;
     }
-    public static Product updateProduct(double price,int id)
+    public static Product updateProduct(double price,int stock)
     {
         Product product = new Product();
-        product.setId(id);
+      //  product.setId(id);
         product.setPrice(price);
+        product.setStock(stock);
         return product;
     }
 }

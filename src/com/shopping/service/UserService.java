@@ -10,13 +10,13 @@ import java.sql.SQLException;
  */
 public interface UserService {
 
-    public void addUser(User user) throws SQLException;
+    public void addUser(User user) throws SQLException,Exception;
 
     public void deleteUser(int id);
 
     public void fetchUser(int id);
 
-    public void updateUser(String userName,int id);
+    public void updateUser(User user,int id);
 
     public User readUser(int id);
 }

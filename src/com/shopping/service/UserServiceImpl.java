@@ -11,9 +11,10 @@ import java.sql.SQLException;
 public class UserServiceImpl implements UserService {
 
     @Override
-    public void addUser(User user) throws SQLException {
+    public void addUser(User user) throws SQLException,Exception {
         UserDaoImpl userDao = new UserDaoImpl();
             userDao.createUser(user);
+          //  System.err.println("Normal message");
     }
 
     @Override
@@ -39,13 +40,14 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void updateUser(String userName,int id) {
+    public void updateUser(User user,int id) {
         UserDaoImpl userDao = new UserDaoImpl();
         try {
-           userDao.updateUser(userName,id);
+           userDao.updateUser(user,id);
         } catch (SQLException e) {
             e.printStackTrace();
         }
+       // return user;
     }
 
     @Override

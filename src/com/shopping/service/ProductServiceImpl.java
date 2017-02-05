@@ -24,9 +24,9 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public void updateProduct(double price, int id) throws SQLException {
+    public void updateProduct(Product product, int id) throws SQLException {
         ProductDaoImpl productDao = new ProductDaoImpl();
-        productDao.updateProduct(price,id);
+        productDao.updateProduct(product,id);
 
     }
 

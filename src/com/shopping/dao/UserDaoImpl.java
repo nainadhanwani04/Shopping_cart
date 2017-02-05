@@ -13,21 +13,21 @@ import java.sql.ResultSet;
  */
 public class UserDaoImpl implements UserDao {
     @Override
-    public void createUser(User user) throws SQLException{
+    public void createUser(User user) throws Exception {
 
         try {
             Connection con = DBConnection.getConnection();
-            String query = " insert into users (id,user_name,first_name,last_name, address)"
-                    + " values (?, ?, ?, ?, ?)";
+            String query = " insert into users (user_name,first_name,last_name, address)"
+                    + " values ( ?, ?, ?, ?)";
 
             // create the mysql insert preparedstatement
             PreparedStatement preparedStmt = con.prepareStatement(query);
 
-            preparedStmt.setInt(1, user.getId());
-            preparedStmt.setString(2, user.getUserName());
-            preparedStmt.setString(3, user.getFirstName());
-            preparedStmt.setString(4, user.getLastName());
-            preparedStmt.setString(5, user.getAddress());
+         //   preparedStmt.setInt(1, user.getId());
+            preparedStmt.setString(1, user.getUserName());
+            preparedStmt.setString(2, user.getFirstName());
+            preparedStmt.setString(3, user.getLastName());
+            preparedStmt.setString(4, user.getAddress());
 
             // execute the preparedstatement
             preparedStmt.execute();
@@ -35,8 +35,9 @@ public class UserDaoImpl implements UserDao {
         } catch (SQLException e) {
             System.err.println("Got an exception!");
             System.err.println(e.getMessage());
+        } catch (Exception e){
+            throw  e;
         }
-
     }
 
     @Override
@@ -61,9 +62,6 @@ public class UserDaoImpl implements UserDao {
                 String lastname = rs.getString("last_name");
                 String address = rs.getString("address");
 
-              /* System.out.println("userid : " + userid);
-                System.out.println("username : " + username);*/
-
                 user5.setId(id);
                 user5.setUserName(username);
                 user5.setFirstName(firstname);
@@ -75,7 +73,6 @@ public class UserDaoImpl implements UserDao {
             con.close();
         } catch (SQLException e) {
             System.err.println("Got an exception1!");
-            //System.err.println(e.getMessage());
         } finally {
                 preparedStmt.close();
                 con.close();
@@ -87,28 +84,44 @@ public class UserDaoImpl implements UserDao {
 
 
     @Override
-    public void updateUser(String userName,int id) throws SQLException {
+    public void updateUser(User user, int id) throws SQLException {
         Connection con = DBConnection.getConnection();
-        String query = "UPDATE users SET user_name = ? WHERE ID = ?";
-
+        String query = "UPDATE users SET user_name = ?, first_name= ?, last_name = ? ,address = ? WHERE ID = ?";
+        //  String updateFirstName,updateLastName,updateUserName,updateAddress;
         // create the mysql insert preparedstatement
+        //String query1 = "Select * from users where id= ?";
+        User user1 = readUser(id);
         PreparedStatement preparedStmt = con.prepareStatement(query);
-
         try {
-            preparedStmt.setString(1, userName);
-            preparedStmt.setInt(2,id);
+            if ( user.getUserName() != null )
+                preparedStmt.setString(1, user.getUserName());
+            else
+                preparedStmt.setString(1, user1.getUserName());
+            if ( user.getFirstName() != null )
+                preparedStmt.setString(2, user.getFirstName());
+            else
+                preparedStmt.setString(2, user1.getFirstName());
+            if ( user.getLastName() != null )
+                preparedStmt.setString(3, user.getLastName());
+            else
+                preparedStmt.setString(3, user1.getLastName());
+            if ( user.getAddress() != null )
+                    preparedStmt.setString(4, user.getAddress());
+            else
+                preparedStmt.setString(4, user1.getAddress());
+
+            preparedStmt.setInt(5, id);
 
             // execute the preparedstatement
             preparedStmt.execute();
             con.close();
-        }
-        catch (SQLException e)
-        {
+        } catch (SQLException e) {
             System.err.println("Got an exception!");
             System.err.println(e.getMessage());
         }
-
     }
+
+
 
     @Override
     public void deleteUser(int id) throws SQLException {

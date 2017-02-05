@@ -13,6 +13,7 @@ public class OrderDetail {
 
     public int getId() {
         return id;
+
     }
 
     public void setId(int id) {
@@ -58,14 +59,11 @@ public class OrderDetail {
 
         this.price = price;
     }
-
     public double getAmount() {
-
         return amount;
     }
-
     public void setAmount(double amount) {
-
         this.amount = amount;
     }
+
 }

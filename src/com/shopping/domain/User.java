@@ -59,9 +59,9 @@ public class User {
         this.address = address;
     }
 
-    public static User createUser(int id, String userName, String firstName, String lastName, String address) {
+    public static User createUser( String userName, String firstName, String lastName, String address) {
         User user = new User();
-        user.setId(id);
+       // user.setId(id);
         user.setUserName(userName);
         user.setFirstName(firstName);
         user.setLastName(lastName);
@@ -69,11 +69,15 @@ public class User {
         return user;
     }
 
-    public static User updateUser(String userName,int id)
-    {
+    public static User UpdateUser( String firstName, String lastName, String address) {
         User user = new User();
-        user.setId(id);
-        user.setUserName("Naina");
+        //user.setId(id);
+        //user.setUserName(userName);
+        user.setFirstName(firstName);
+        user.setLastName(lastName);
+        user.setAddress(address);
         return user;
     }
-    }
+
+
+}

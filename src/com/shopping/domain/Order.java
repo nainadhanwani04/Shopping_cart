@@ -1,6 +1,7 @@
 package com.shopping.domain;
 
 
+
 import java.util.Date;
 import java.util.List;
 
@@ -8,11 +9,20 @@ import java.util.List;
  * Created by nainadhanwani on 1/25/17.
  */
 public class Order {
-private  int id;
-private Date orderDate;
-private double amount;
-private int userId;
-private List<OrderDetail> orderdetail;
+    private  int id;
+    private Date orderDate;
+    private double amount;
+    private int userId;
+    private List<OrderDetail> orderdetail;
+    public Date getOrderDate() {
+        return orderDate;
+    }
+
+    public void setOrderDate(Date orderDate) {
+        this.orderDate = orderDate;
+    }
+
+
 
     public List<OrderDetail> getOrderdetail() {
         return orderdetail;
@@ -22,27 +32,15 @@ private List<OrderDetail> orderdetail;
         this.orderdetail = orderdetail;
     }
 
-
-
     public int getId() {
 
         return id;
     }
 
     public void setId(int id) {
-
         this.id = id;
     }
 
-    public Date getOrderDate() {
-
-        return orderDate;
-    }
-
-    public void setOrderDate() {
-
-        this.orderDate = orderDate;
-    }
 
     public double getAmount() {
 
@@ -64,6 +62,14 @@ private List<OrderDetail> orderdetail;
         this.userId = userId;
     }
 
-    public void setOrderDate(int i) {
+    public static  Order createOrder(Date orderDate, double amount, int userId)
+    {
+        Order order = new Order();
+      //  order.setId(id);
+        order.setOrderDate(orderDate);
+        order.setAmount(amount);
+        order.setUserId(userId);
+        return order;
     }
+
 }

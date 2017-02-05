@@ -13,7 +13,7 @@ public interface ProductService {
 
     public Product readProduct(int id) throws SQLException;
 
-    public void updateProduct(double price,int id) throws SQLException;
+    public void updateProduct(Product product,int id) throws SQLException;
 
     public void deleteProduct(int id) throws SQLException;
 

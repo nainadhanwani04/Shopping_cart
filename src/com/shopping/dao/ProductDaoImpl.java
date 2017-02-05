@@ -17,17 +17,17 @@ public class ProductDaoImpl implements ProductDao {
     public void addProducts(Product product) {
         try{
         Connection con = DBConnection.getConnection();
-        String query = " insert into products (id,name,code,price, stock)"
-                + " values (?, ?, ?, ?, ?)";
+        String query = " insert into products (name,code,price, stock)"
+                + " values (?, ?, ?, ?)";
 
         // create the mysql insert preparedstatement
         PreparedStatement preparedStmt = con.prepareStatement(query);
 
-        preparedStmt.setInt(1, product.getId());
-        preparedStmt.setString(2,product.getName() );
-        preparedStmt.setString(3, product.getCode());
-        preparedStmt.setDouble(4, product.getPrice());
-        preparedStmt.setInt(5, product.getStock());
+       // preparedStmt.setInt(1, product.getId());
+        preparedStmt.setString(1,product.getName() );
+        preparedStmt.setString(2, product.getCode());
+        preparedStmt.setDouble(3, product.getPrice());
+        preparedStmt.setInt(4, product.getStock());
 
         // execute the preparedstatement
         preparedStmt.execute();
@@ -89,27 +89,39 @@ public class ProductDaoImpl implements ProductDao {
     }
 
     @Override
-    public void updateProduct(double price, int id) throws SQLException {
+    public void updateProduct(Product product, int id) throws SQLException {
         Connection con = DBConnection.getConnection();
-        String query = "UPDATE products SET price = ? WHERE ID = ?";
+        String query = "UPDATE products SET name = ?, code = ?, price = ? ,stock = ? WHERE ID = ?";
 
-        // create the mysql insert preparedstatement
+        Product product1 = readProduct(id);
         PreparedStatement preparedStmt = con.prepareStatement(query);
-
         try {
-            preparedStmt.setDouble(1, 1000);
-            preparedStmt.setInt(2,id);
+            if ( product.getName() != null )
+                preparedStmt.setString(1, product.getName());
+            else
+                preparedStmt.setString(1, product1.getName());
+            if ( product.getCode() != null )
+                preparedStmt.setString(2, product.getCode());
+            else
+                preparedStmt.setString(2, product1.getCode());
+            if ( product.getPrice() != product1.getPrice() )
+                preparedStmt.setDouble(3, product.getPrice());
+            else
+                preparedStmt.setDouble(3, product1.getPrice());
+            if ( product.getStock() != product1.getStock() )
+                preparedStmt.setInt(4, product.getStock());
+            else
+                preparedStmt.setInt(4, product1.getStock());
+
+            preparedStmt.setInt(5, id);
 
             // execute the preparedstatement
             preparedStmt.execute();
             con.close();
-        }
-        catch (SQLException e)
-        {
+        } catch (SQLException e) {
             System.err.println("Got an exception!");
             System.err.println(e.getMessage());
         }
-
     }
 
     @Override

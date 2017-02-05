@@ -13,7 +13,7 @@ public void createUser(User user) throws Exception;
 
 public User readUser(int id) throws SQLException;
 
-public void updateUser(String userName,int id) throws SQLException;
+public void updateUser(User user,int id) throws SQLException;
 
 public void deleteUser(int id) throws SQLException;
 }
